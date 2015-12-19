@@ -1,0 +1,7 @@
+"id","no","name","link","menu_type","sort","status","created","modified"
+"","1","about","/about","default","2","1","",""
+"","2","お知らせ","/data/archives/tag/お知らせ/","blog","3","1","",""
+"","3","オススメ","/data/archives/tag/オススメ/","blog","4","1","",""
+"","4","実績","/data/archives/tag/実績/","blog","5","1","",""
+"","5","会社概要","/company","default","6","1","",""
+"","6","お問い合わせ","/contact","default","7","1","",""
