@@ -49,15 +49,7 @@ $blog_count = 9;
 						//	$this->BcBaser->mainImage(array('all' => true, 'num' => 3, 'width' => 770));
 						$imageCount = 3;
 						$options = array_merge(array('num' => $imageCount, 'all' => true, 'id' => 'MainImage', 'width' => 770), array());
-						echo "<ul id=\"MainImage\">";
-						for ($i = 1; $i <= $imageCount; $i++) {
-							$options['num'] = $i;
-							echo "<li style='width:770px'>";
-							echo $this->BcBaser->_getThemeImage('main_image', $options);
-							echo "</li>";
-						}
-						echo "</ul>";
-
+  					$this->BcBaser->mainImage(array('all' => true, 'num' => 3, 'width' => 770));
 						echo "<nav>";
 						$this->BcBaser->blogPosts("data", $top_count, array("tag" => "TOP"));
 						echo "</nav>";
@@ -89,12 +81,12 @@ $blog_count = 9;
 				<?php $this->BcBaser->element('sidebox') ?>
 			</nav>
 
-		</div><!--Page-->		
+		</div><!--Page-->
 		<?php $this->BcBaser->footer() ?>
 		<?php $this->BcBaser->func() ?>
 		<script>
 			$(function() {
-				<?php 
+				<?php
 				// 画像ファイルを左右の縮尺を合わせて上下をトリミングするための処理
 				?>
 				$(".img-eye-catch").on("load", function() {
@@ -102,9 +94,9 @@ $blog_count = 9;
 					var ih = ($(this).height() - ch) / 2;
 					$(this).css("top", "-" + ih + "px");
 				});
-				<?php 
+				<?php
 				// スマートURLを使用していない時にeye-catchが使用できないバグを回避するロジック
-				?>				
+				?>
 				$('.img-eye-catch').error(function() {
 					imageUrl = $(this).attr('src');
 					i = location.href.lastIndexOf("index.php/");
